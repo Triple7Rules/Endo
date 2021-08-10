@@ -6,7 +6,7 @@
   </head>
   <body>
       <script>
-      function go(){
+        if (event.keyCode === 13){
         var search=document.getElementById("text");
         var searchq=search.value;
         if(searchq=="72 90 69 84"){
@@ -15,10 +15,11 @@
         else{
         alert("Incorect Code")
         }
-      }
+        }
+
     </script>
-    <input type="text" id="text"style="background-color:white;font-size:23px; height:45px;width:700px;border-radius:30px;" <button style="float: right; border:0px white;" onclick="go()">go</button>>
-    <button onclick="go()">go</button>
+    <input type="text" id="text"style="background-color:white;font-size:23px; height:45px;width:700px;border-radius:30px;" >
+
   </body>
   <style>
   </style>
