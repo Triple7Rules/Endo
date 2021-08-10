@@ -6,6 +6,7 @@
   </head>
   <body>
       <script>
+        input.addEventListener("keyup", function(event) {
         if (event.keyCode === 13){
         var search=document.getElementById("text");
         var searchq=search.value;
@@ -16,7 +17,7 @@
         alert("Incorect Code")
         }
         }
-
+        }
     </script>
     <input type="text" id="text"style="background-color:white;font-size:23px; height:45px;width:700px;border-radius:30px;" >
 
