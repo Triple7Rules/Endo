@@ -17,16 +17,26 @@
         }
         }
     </script>
+    <div class="img">
+      
+      </div>
     <div class="mid">
     <input type="text" id="text"style="background-color:white;font-size:23px; height:45px;width:700px;border-radius:30px;" >
     <button style="background-color:white;font-size:23px; height:45px;width:45px;border-radius:30px;" onclick="go()">Go</button>
-
+</div>
   </body>
   <style>
 
     .mid{
   position: fixed; /* or absolute */
   top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+    }
+    .img{
+      position: fixed; /* or absolute */
+  top: 40%;
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
