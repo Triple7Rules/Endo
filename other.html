@@ -4,14 +4,20 @@
     <title>Search...</title>
     </head>
 <body>
+<input id="text1" style=" position: absolute;
+  top: 20%;
+  left: 50%;
+display:none;
+  transform: translate(-50%, -50%);background-color:white;font-size:23px; height:45px;width:700px;border-radius:30px;placeholder:search...;">
 
 
-
-<input id="text" style="  position: fixed; position: absolute;
+<input id="text" style=" position: absolute;
   top: 50%;
   left: 50%;
 
   transform: translate(-50%, -50%);background-color:white;font-size:23px; height:45px;width:700px;border-radius:30px;placeholder:search...;">
+  
+  
 <button id="myBtn" onclick="hi()"style="background-color: white;border: 0px white;"></button>
 <div class="frame" >
 <iframe id="ifrm" src="https://news.com.au" style="width:1300px;height:500px;background-color:white;display: none;"></iframe>
@@ -19,12 +25,16 @@
 <button onclick="news();" style = "width:600px;height:50px;">hi</button>
 </div>
 <script>
-
+var textbox1=document.getElementById("text1");
 var frame = document.getElementById("ifrm");
-
+frame.style.top = "20%";
+function tbu(){
+frame.style.top = "20%";
+}
 function news(){
-document.getElementById("ifrm").style.display = "none";
-document.getElementById("ifrm").style.top = "100px";
+frame.style.top = "20%";
+frame.style.display = "block";
+textbox1.style.display="block"
 }
 
 var input = document.getElementById("text");
