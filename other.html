@@ -7,7 +7,11 @@
 
 
 
-<div class="mid"><input id="text" style="background-color:white;font-size:23px; height:45px;width:700px;border-radius:30px;placeholder:search...;"></div>
+<input id="text" style="  position: fixed; position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);background-color:white;font-size:23px; height:45px;width:700px;border-radius:30px;placeholder:search...;">
 <button id="myBtn" onclick="hi()"style="background-color: white;border: 0px white;"></button>
 <div class="frame" >
 <iframe id="ifrm" src="https://news.com.au" style="width:1300px;height:500px;background-color:white;display: none;"></iframe>
@@ -17,8 +21,10 @@
 <script>
 
 var frame = document.getElementById("ifrm");
+
 function news(){
-document.getElementById("ifrm").style.display = "block";
+document.getElementById("ifrm").style.display = "none";
+document.getElementById("ifrm").style.top = "100px";
 }
 
 var input = document.getElementById("text");
@@ -37,7 +43,7 @@ function hi(){
 <style>
     .mid{
   position: fixed; 
-  top: 20%;
+  top: 50%;
   left: 50%;
 
   transform: translate(-50%, -50%);
