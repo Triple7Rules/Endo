@@ -1,50 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="shortcut icon" href="https://triple7rules.github.io/Endo/favicon%20(1).ico" />
-    <title>Jump Search - Endo</title>
-  </head>
-  <body> 
-      <script> 
-        function go(){
-        var search=document.getElementById("text");
-        var searchq=search.value;
-          window.location.href = "https://google.com/search?q="+searchq;
-        if(searchq=="72 90 69 84"){
-        alert("Corect Code... Redirecting")
-        }
-        else{
-        alert("Incorect Code")
-        }
-        }
-    </script>
-    <div class="img">
-      <img src="endobrick-removebg-preview (1).png">
-      </div>
-    <div class="mid">
-    <input type="text" id="text"style="background-color:white;font-size:23px; height:45px;width:700px;border-radius:30px;placeholder:search...;" >
-    
-</div><button style="background-color:white;font-size:23px; height:45px;width:45px;border-radius:30px;" onclick="go()">Go</button>
-  </body>
-  <style>
+    <title>Search...</title>
+    </head>
+<body>
+<input id="text1" style=" position: absolute;
+  top: 7%;
+  left: 50%;
+display:none;
+  transform: translate(-50%, -50%);background-color:white;font-size:23px; height:45px;width:700px;border-radius:30px;placeholder:search...;">
 
-    .mid{
-  position: fixed; /* or absolute */
+
+<input id="text" style=" position: absolute;
   top: 50%;
   left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
-    }
-    .img{
-      position: fixed; /* or absolute */
-  top: 30%;
+
+  transform: translate(-50%, -50%);background-color:white;font-size:23px; height:45px;width:700px;border-radius:30px;placeholder:search...;">
+  
+  
+<button id="myBtn" onclick="hi()"style="background-color: white;border: 0px white;"></button>
+<div class="frame" >
+<iframe id="ifrm" src="https://news.com.au" style="width:1500px;height:900px;background-color:white;display: none;"></iframe>
+<div class="news">
+<button onclick="news();" style = "width:600px;height:50px;">hi</button>
+</div>
+<script>
+var tbx = 1;
+var textbox1=document.getElementById("text1");
+var frame = document.getElementById("ifrm");
+frame.style.top = "20%";
+function tbu(){
+frame.style.top = "20%";
+}
+function news(){
+frame.style.top = "20%";
+frame.style.display = "block";
+textbox1.style.display="block";
+
+}
+
+var input = document.getElementById("text");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+function hi(){
+ var search=document.getElementById("text");
+        var searchq=search.value;
+          window.location.href = "https://google.com/search?q="+searchq;
+}
+</script>
+<style>
+    .mid{
+  position: fixed; 
+  top: 50%;
   left: 50%;
-  /* bring your own prefixes */
+
   transform: translate(-50%, -50%);
     }
-    body{
-    background-image: url('https://wallpapershome.com/images/wallpapers/sunset-5120x2880-clouds-5k-19547.jpg');
+        .frame{
+  position: fixed; 
+  top: 70%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
     }
-  </style>
+            .news{
+  position: fixed; 
+  top: 90%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+    }
+  body{
+  background-image: url('https://images.designtrends.com/wp-content/uploads/2016/03/30062511/Tokyo-City-Wallpaper.jpg');
+  }
+</style>
+</body>
 </html>
- 
