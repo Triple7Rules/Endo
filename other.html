@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search...</title>
+    </head>
+<body onclick="news()">
+
+
+
+<div class="mid"><input onclick="news()" id="text" style="background-color:white;font-size:23px; height:45px;width:700px;border-radius:30px;placeholder:search...;"></div>
+<button id="myBtn" onclick="hi()"style="background-color: white;border: 0px white;"></button>
+<div class="frame" >
+<iframe id="ifrm" src="https://news.com.au" style="width:1300px;height:500px;background-color:white;display: none;"></iframe>
+<div class="news">
+<button onclick="news();" style = "width:600px;height:50px;">hi</button>
+</div>
+<script>
+
+var frame = document.getElementById("ifrm");
+function news(){
+alert("hi")
+}
+
+var input = document.getElementById("text");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+function hi(){
+ var search=document.getElementById("text");
+        var searchq=search.value;
+          window.location.href = "https://google.com/search?q="+searchq;
+}
+</script>
+<style>
+    .mid{
+  position: fixed; 
+  top: 20%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+    }
+        .frame{
+  position: fixed; 
+  top: 70%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+    }
+            .news{
+  position: fixed; 
+  top: 90%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+    }
+  body{
+  background-image: url('https://images.designtrends.com/wp-content/uploads/2016/03/30062511/Tokyo-City-Wallpaper.jpg');
+  }
+</style>
+</body>
+</html>
