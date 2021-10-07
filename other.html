@@ -3,11 +3,11 @@
   <head>
     <title>Search...</title>
     </head>
-<body onclick="news()">
+<body>
 
 
 
-<div class="mid"><input onclick="news()" id="text" style="background-color:white;font-size:23px; height:45px;width:700px;border-radius:30px;placeholder:search...;"></div>
+<div class="mid"><input id="text" style="background-color:white;font-size:23px; height:45px;width:700px;border-radius:30px;placeholder:search...;"></div>
 <button id="myBtn" onclick="hi()"style="background-color: white;border: 0px white;"></button>
 <div class="frame" >
 <iframe id="ifrm" src="https://news.com.au" style="width:1300px;height:500px;background-color:white;display: none;"></iframe>
@@ -18,7 +18,7 @@
 
 var frame = document.getElementById("ifrm");
 function news(){
-alert("hi")
+document.getElementById("ifrm").style.display = "block";
 }
 
 var input = document.getElementById("text");
